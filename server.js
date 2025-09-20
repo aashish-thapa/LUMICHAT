@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || "text-embedding-3-large";
-const PINECONE_INDEX_NAME = process.env.PINECONE_INDEX_NAME || "LumiChat";
+const PINECONE_INDEX_NAME = process.env.PINECONE_INDEX_NAME || "lumichat";
 const PINECONE_CLOUD = process.env.PINECONE_CLOUD || "aws";
 const PINECONE_REGION = process.env.PINECONE_REGION || "us-east-1";
 const EMBEDDING_DIMENSION = Number(process.env.EMBEDDING_DIMENSION) || (EMBEDDING_MODEL === "text-embedding-3-small" ? 1536 : 3072);
